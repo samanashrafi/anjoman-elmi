@@ -71,8 +71,19 @@ gulp.task('minify:css', function() {
     ])
     .pipe(cleanCss())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(paths.dist.base + '/css'))
+    .pipe(gulp.dest(paths.dist.base + '/assets/css'))
 });
+
+gulp.task('minify:bootstrap', function() {
+    return gulp.src([
+        paths.src.base + '/assets/css/bootstrap/bootstrap-grid.css',
+        paths.src.base + '/assets/css/bootstrap/bootstrap-reboot.css',
+        paths.src.base + '/assets/css/bootstrap/bootstrap.css',
+      ])
+      .pipe(cleanCss())
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(gulp.dest(paths.dist.base + '/assets/css/bootstrap'))
+  });
 
 // Minify JS
 
@@ -82,7 +93,7 @@ gulp.task('minify:js', function(cb) {
         ])
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(paths.dist.base + '/js'))
+        .pipe(gulp.dest(paths.dist.base + '/assets/js'))
 });
 
 // Live reload
@@ -113,24 +124,40 @@ gulp.task('clean:dist', function() {
 
 gulp.task('copy:css', function() {
     return gulp.src([
-        paths.src.base + '/assets/css/argon.css'
+        paths.src.base + '/assets/css/argon.css',
     ])
-    .pipe(gulp.dest(paths.dist.base + '/css'))
+    .pipe(gulp.dest(paths.dist.base + '/assets/css'))
 });
 
+gulp.task('copy:bootstrap', function() {
+    return gulp.src([
+        paths.src.base + '/assets/css/bootstrap/bootstrap-grid.css',
+        paths.src.base + '/assets/css/bootstrap/bootstrap-reboot.css',
+        paths.src.base + '/assets/css/bootstrap/bootstrap.css',
+    ])
+    .pipe(gulp.dest(paths.dist.base + '/assets/css/bootstrap'))
+});
+
+
+gulp.task('copy:html', function() {
+    return gulp.src([
+        paths.src.base + '/index.html',
+    ])
+    .pipe(gulp.dest(paths.dist.base + ''))
+});
 // Copy JS
 
 gulp.task('copy:js', function() {
     return gulp.src([
         paths.src.base + '/assets/js/argon.js'
     ])
-    .pipe(gulp.dest(paths.dist.base + '/js'))
+    .pipe(gulp.dest(paths.dist.base + '/assets/js'))
 });
 
 // Build
 
 gulp.task('build', function(callback) {
-    runSequence('clean:dist', 'scss', 'copy:css', 'copy:js', 'minify:js', 'minify:css',
+    runSequence('clean:dist', 'scss', 'copy:css','copy:bootstrap', 'copy:js', 'copy:html','minify:js', 'minify:css','minify:bootstrap',
         callback);
 });
 
