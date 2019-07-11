@@ -15,6 +15,16 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+@font-face
+{
+    font-family: iranyekan;
+    font-weight: 300;
+    font-style: normal;
+
+    src: url('../fonts/iranyekan/iranyekanweblight.eot');
+    src: url('../fonts/iranyekan/iranyekanweblight.eot?#iefix') format('embedded-opentype'), url('../fonts/iranyekan/iranyekanweblight.woff') format('woff'), url('../fonts/iranyekan/iranyekanweblight.ttf') format('truetype');
+}
+
 :root
 {
     --blue: #5e72e4;
@@ -20323,7 +20333,7 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle
     left: auto;
 }
 
-#saman
+body
 {
-    color: red;
+    font-family: iranyekan;
 }
