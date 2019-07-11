@@ -1,3 +1,55 @@
-body{
-    font-family: iranyekan;
+body {
+  font-family: iranyekan;
+  direction: rtl;
+}
+
+// Header
+.navbar-toggler{
+    background: #eee;
+}
+
+.navbar-collapse {
+  border-bottom: solid 1px #eee;
+  .navbar-nav {
+    padding: 0;
+    .nav-link {
+      font-family: unset;
+      margin: 0;
+      text-align: right;
+    }
+  }
+ 
+  .navbar-search {
+      position: relative;
+      float: left;
+     
+    &.form-group{
+        margin-bottom: 0;
+    }
+    .btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #eee;
+        padding: 12px 8px;
+        // @include border-radius(0px);
+        &:hover{
+            // @include transition(all 0.3s);
+            //@include transform(unset);
+            // @include box-shadow(unset)
+        }
+    }
+    .form-control{
+        padding-left: 74px;
+        border: solid 1px #eee;
+        // @include border-radius("0px");
+    }
+
+    @include media-breakpoint-down($sm,992px)
+    {
+        width: 100%;
+    }
+  }
+
+ 
 }

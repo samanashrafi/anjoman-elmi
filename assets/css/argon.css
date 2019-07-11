@@ -20336,4 +20336,56 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle
 body
 {
     font-family: iranyekan;
+
+    direction: rtl;
+}
+
+.navbar-toggler
+{
+    background: #eee;
+}
+
+.navbar-collapse
+{
+    border-bottom: solid 1px #eee;
+}
+.navbar-collapse .navbar-nav
+{
+    padding: 0;
+}
+.navbar-collapse .navbar-nav .nav-link
+{
+    font-family: unset;
+
+    margin: 0;
+
+    text-align: right;
+}
+.navbar-collapse .navbar-search
+{
+    position: relative;
+
+    float: left;
+
+    width: 100%;
+}
+.navbar-collapse .navbar-search.form-group
+{
+    margin-bottom: 0;
+}
+.navbar-collapse .navbar-search .btn
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 12px 8px; 
+
+    background: #eee;
+}
+.navbar-collapse .navbar-search .form-control
+{
+    padding-left: 74px;
+
+    border: solid 1px #eee;
 }
