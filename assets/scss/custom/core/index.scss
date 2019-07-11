@@ -1,55 +1,181 @@
 body {
   font-family: iranyekan;
   direction: rtl;
+  text-align: right;
 }
 
 // Header
-.navbar-toggler{
-    background: #eee;
+.navbar-toggler {
+  background: #eee;
 }
 
+.headroom {
+  padding-bottom: 0;
+}
 .navbar-collapse {
   border-bottom: solid 1px #eee;
+  // margin: 0 -15px;
   .navbar-nav {
     padding: 0;
     .nav-link {
       font-family: unset;
       margin: 0;
       text-align: right;
+      padding: 7px;
+    }
+    .nav-item {
+      &::first-child {
+        margin-right: 0;
+      }
     }
   }
- 
+
   .navbar-search {
-      position: relative;
-      float: left;
-     
-    &.form-group{
-        margin-bottom: 0;
+    position: relative;
+    float: left;
+
+    &.form-group {
+      margin-bottom: 0;
     }
-    .btn{
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: #eee;
-        padding: 12px 8px;
-        // @include border-radius(0px);
-        &:hover{
-            // @include transition(all 0.3s);
-            //@include transform(unset);
-            // @include box-shadow(unset)
-        }
+    .btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #eee;
+      padding: 12px 8px;
+      @include border-radius(0px);
+      &:hover {
+        // @include transition(all 0.3s);
+        //@include transform(unset);
+        // @include box-shadow(unset)
+      }
     }
-    .form-control{
-        padding-left: 74px;
-        border: solid 1px #eee;
-        // @include border-radius("0px");
+    .form-control {
+      padding-left: 74px;
+      border: solid 1px #eee;
+      // @include border-radius("0px");
     }
 
-    @include media-breakpoint-down($sm,992px)
-    {
-        width: 100%;
+    // @include media-breakpoint-down($sm,992px)
+    // {
+    //     width: 100%;
+    // }
+  }
+}
+
+.banner {
+  margin-top: $margin;
+  padding: 5px;
+  .logo {
+    padding: 8px;
+    img {
+      max-width: 70px;
+      max-height: 70px;
+      float: right;
+    }
+    div {
+      float: right;
+      font-size: 18px;
+      font-weight: bold;
+      margin-right: 10px;
+      &.first{
+        color: #218096;
+        margin-top: 8px;
+      }
     }
   }
-
- 
+  .gif {
+    background: #eee;
+    width: 100%;
+    height: 90px;
+    float: right;
+  }
 }
+.other-menu {
+  margin-top: $margin;
+  background: #f14f7e;
+  .navbar-nav {
+    display: unset;
+    flex-direction: unset;
+    list-style: none;
+    padding-right: 0;
+    .nav-link {
+      font-family: unset;
+      color: #fff;
+      padding: 15px 5px;
+    }
+    .dropdown-menu {
+      position: absolute;
+    }
+  }
+  .dropdown-menu {
+    left: unset;
+    right: 0;
+    .dropdown-item {
+      text-align: right;
+    }
+    &::before {
+      left: unset;
+      right: 20px;
+    }
+  }
+}
+.border {
+  padding: 20px;
+  border: #eee 1px solid;
+}
+
+.main {
+  margin-top: $margin;
+  .side-right,
+  .side-left {
+    height: 400px;
+  }
+}
+
+footer {
+  background: #c7c7c7;
+  margin-top: $margin;
+  width: 100%;
+  float: right;
+  padding: 30px 0;
+  
+  .logo{
+    float: right;
+    img{
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      display: table;
+      margin: 0 auto;
+      max-width: 70px;
+      max-height: 70px;
+    }
+    div{
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      &.first{
+        color: #218096;
+       margin-top: 10px;
+      }
+    }
+  }
+  ul {
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+      a {
+        color: #333;
+        font-weight: 600;
+        &:hover {
+          color: #f14f7e;
+        }
+      }
+    }
+  }
+}
+
+
+
+//public
+
