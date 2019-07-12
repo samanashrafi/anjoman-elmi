@@ -20333,6 +20333,29 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle
     left: auto;
 }
 
+/*@mixin gradient($color: #F5F5F5, $start: #EEE, $stop: #FFF){
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $start),color-stop(1, $stop));
+	background-image: -moz-linear-gradient(center bottom,$start 0,$stop 100%);
+	background-image: linear-gradient(to top, $start, $stop); // Standard, IE10
+	background-image: -ms-linear-gradient(bottom,$start,$stop);
+	background-image: -o-linear-gradient($stop,$start);
+	//filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",$stop,$start));
+	}*/
+/*
+@include keyframes(slide-down) {
+  0% { opacity: 1; }
+  90% { opacity: 0; }
+}
+
+
+.element {
+  width: 100px;
+  height: 100px;
+  background: black;
+  @include animation('slide-down 5s 3');
+}
+
+*/
 body
 {
     font-family: iranyekan;
@@ -20350,6 +20373,22 @@ body
 .headroom
 {
     padding-bottom: 0;
+}
+
+.navbar-expand-lg .container
+{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.headroom
+{
+    will-change: unset;
+}
+
+.navbar-light .navbar-toggler
+{
+    outline: none;
 }
 
 .navbar-collapse
@@ -20373,6 +20412,10 @@ body
 {
     margin-right: 0;
 }
+.navbar-collapse .dropdown-menu .dropdown-item
+{
+    text-align: right;
+}
 .navbar-collapse .navbar-search
 {
     position: relative;
@@ -20389,9 +20432,8 @@ body
     top: 0;
     left: 0;
 
-    padding: 12px 8px;
+    padding: 12px 8px; 
 
-    border-radius: 0; 
     background: #eee;
 }
 .navbar-collapse .navbar-search .form-control
@@ -20399,6 +20441,27 @@ body
     padding-left: 74px;
 
     border: solid 1px #eee;
+}
+@media (max-width: 991px)
+{
+    .navbar-collapse .navbar-search .form-control
+    {
+        width: 100%;
+    }
+}
+
+.collapse-brand img
+{
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.navbar-toggler-icon i
+{
+    font-size: 36px;
+
+    position: relative;
+    top: -3px;
 }
 
 .banner
@@ -20649,10 +20712,6 @@ footer
 
     background: #c7c7c7;
 }
-footer .logo
-{
-    float: right;
-}
 footer .logo img
 {
     display: table;
@@ -20694,6 +20753,11 @@ footer ul li a:hover
     color: #f14f7e;
 }
 
+.carousel
+{
+    margin-bottom: 30px;
+}
+
 .box
 {
     float: right;
@@ -20732,4 +20796,25 @@ footer ul li a:hover
     float: left;
 
     padding-top: 10px;
+}
+
+.Fade-in-Out
+{
+    animation: fade 2s linear;
+    animation-iteration-count: infinite; 
+
+    opacity: 1;
+}
+
+@keyframes fade
+{
+    0%,
+    100%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+    }
 }

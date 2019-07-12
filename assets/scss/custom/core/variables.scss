@@ -1,4 +1,78 @@
 
+
+$color-navy: #231f20; //#272c36;
+$color-navy-light: #f3f7fa;
+$color-artemisia-gray: #6d6e71;
+$color-body:#6d6e71;
+$color-red: #ef4123; //#c22028
+$color-error: #c22028;
+$color-green: #21c64f;
+
+$color-primary: #fcaf17;
+$color-secondary: #1d3455;
+
+$color-blue: rgb(75, 178, 230);
+$color-light-blue: #e4f2f4;
+$color-white: #fff;
+$color-black: #000;
+$color-yellow: #fcb146;
+$color-note: mix($color-yellow, $color-white, 30%);
+$color-orange: #f79905;
+$color-gray-dlight: #ddd;
+$color-gray-light: #ccc;
+$color-gray-superlight: #f8f8f8; //#e4e4e4
+$color-gray-border: #eee;
+$color-gray-medium: #bdbdbd;
+$color-gray-dark: #333;
+$color-green-light: #11c35e;
+$color-brown: #563a22;
+$fidilio: #770c0c;
+
+// Social Colors
+$color-facebook: #3b5998;
+$color-instagram: linear-gradient(
+  266deg,
+  #4e60d3,
+  #913baf 35%,
+  #d52d88 68%,
+  #f26d4f
+);
+$color-googleplus: #d34836;
+$color-linkedin: #007bb6;
+$color-twitter: #1da1f2;
+$color-telegram: #2ca5e0;
+
+$font-family: "iranyekan", Tahoma, Helvetica, Sans-serif;
+$bg-color: $color-white;
+$bg-gray: #f8f8f8;
+$text-color: $color-secondary;
+$font-base: 16 !default;
+$link-color: $color-primary;
+$link-color-hover: darken($link-color, 20%);
+$input-color-placeholder: #bbb;
+
+// Dots
+$dot-width: 8px;
+$dot-height: 8px;
+$dot-margin: 2px;
+$dot-background: $color-gray-light;
+$dot-background-active: $color-red;
+
+//aside
+$aside-padding: 256px;
+
+// containers
+$container-main: $aside-padding + 30px;
+
+//border
+$border-color: #e6e7e8;
+$boder-radius:25px;
+
+
+
+
+
+
 $margin: 15px;
 $margin-top: $margin + $margin;
 $margin-bottom: $margin + $margin;

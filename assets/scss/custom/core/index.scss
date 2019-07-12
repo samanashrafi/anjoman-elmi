@@ -12,6 +12,20 @@ body {
 .headroom {
   padding-bottom: 0;
 }
+
+.navbar-expand-lg {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+.headroom {
+  will-change: unset;
+}
+
+.navbar-light .navbar-toggler{
+  outline: none;
+}
 .navbar-collapse {
   border-bottom: solid 1px #eee;
   // margin: 0 -15px;
@@ -29,7 +43,9 @@ body {
       }
     }
   }
-
+  .dropdown-menu .dropdown-item {
+    text-align: right;
+  }
   .navbar-search {
     position: relative;
     float: left;
@@ -43,7 +59,7 @@ body {
       left: 0;
       background: #eee;
       padding: 12px 8px;
-      @include border-radius(0px);
+      // @include border-radius(0px);
       &:hover {
         // @include transition(all 0.3s);
         //@include transform(unset);
@@ -54,15 +70,26 @@ body {
       padding-left: 74px;
       border: solid 1px #eee;
       // @include border-radius("0px");
+      @include bp("underdesktop") {
+        width: 100%;
+      }
     }
-
-    // @include media-breakpoint-down($sm,992px)
-    // {
-    //     width: 100%;
-    // }
+  }
+}
+.collapse-brand {
+  img {
+    max-width: 70px;
+    max-height: 70px;
   }
 }
 
+.navbar-toggler-icon {
+  i {
+    font-size: 36px;
+    position: relative;
+    top: -3px;
+  }
+}
 .banner {
   margin-top: $margin;
   padding: 5px;
@@ -155,7 +182,7 @@ body {
         width: 100%;
         float: right;
         border-bottom: 1px solid #eee;
-        .date{
+        .date {
           color: #b8b8b8;
         }
         a {
@@ -219,7 +246,7 @@ body {
     color: #005e91;
   }
 }
-.news-list{
+.news-list {
   padding: 10px 15px;
 
   h5 {
@@ -254,7 +281,6 @@ footer {
   padding: 30px 0;
 
   .logo {
-    float: right;
     img {
       -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
       filter: grayscale(100%);
@@ -288,6 +314,10 @@ footer {
   }
 }
 
+.carousel {
+  margin-bottom: $margin-bottom;
+}
+
 .box {
   background-color: #fff;
   margin-bottom: $margin-bottom;
@@ -319,3 +349,37 @@ footer {
 }
 
 //public
+
+.Fade-in-Out {
+  opacity: 1;
+  animation: fade 2s linear;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
