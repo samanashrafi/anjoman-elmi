@@ -20944,6 +20944,27 @@ footer ul li a:hover
     margin: 0;
 }
 
+.about-us-bg
+{
+    height: 156px; 
+
+    background: url('../../../../assets/img/theme/anjoman.jpg') center center no-repeat;
+    background-size: cover;
+}
+.about-us-bg::before
+{
+    position: absolute;
+    top: 0;
+    right: 15px;
+
+    width: calc(100% - 30px);
+    height: 156px;
+
+    content: '';
+
+    background: rgba(51, 51, 51, .55);
+}
+
 .breadcrumb
 {
     margin: 0;
