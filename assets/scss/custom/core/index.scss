@@ -242,7 +242,8 @@ body {
 }
 
 .main,
-.member {
+.member,
+.view-member {
   margin-top: $margin-top;
   .side-right,
   .side-left {
@@ -401,7 +402,8 @@ footer {
 
 // ------------- Memebr Page  -------------
 
-.member {
+.member,
+.view-member {
   .box {
     min-height: 292px;
     .description {
@@ -478,14 +480,13 @@ footer {
   }
 }
 
-
 // ------------- About Us Page  -------------
 
-.about-us-bg{
-  background: url('../../../../assets/img/theme/anjoman.jpg') center center no-repeat;
+.about-us-bg {
+  background: url("../../../../assets/img/theme/anjoman.jpg") center center no-repeat;
   background-size: cover;
   height: 156px;
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -518,14 +519,41 @@ footer {
   }
 }
 
-.p-all{
-  padding: $margin-bottom;
-}
-.p-t-none{
-  padding-top: 0;
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
+// ------------- View Member Page  -------------
+
+.information {
+  .pic {
+    width: 100%;
+    background: #bbbbbb;
+    border: 5px solid #ececec;
+    box-shadow: 0 0 20px 1px #f5f5f5 !important;
+    img {
+      width: 100%;
+    }
+  }
+  .lbl {
+    font-size: 2em;
+    span {
+      &:first-child {
+        margin-top: $margin-top;
+        color: #444;
+        font-weight: 600;
+      }
+    }
   }
 }
+
+.p-all {
+  padding: $margin-bottom;
+}
+.p-t-none {
+  padding-top: 0;
+}
+.m-t {
+  margin-top: $margin-top;
+}
+// @media (min-width: 1200px) {
+//   .container {
+//     max-width: 1200px;
+//   }
+// }
