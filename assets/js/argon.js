@@ -17,7 +17,7 @@
 */
 
 "use strict";
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Collapse navigation
     $('.navbar-main .collapse').on('hide.bs.collapse', function () {
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
         $this.addClass('close');
 
-        setTimeout(function(){
+        setTimeout(function () {
             $this.removeClass('close');
         }, 200);
 
@@ -54,7 +54,7 @@ $(document).ready(function() {
     // }
 
     // Datepicker
-    $('.datepicker')[0] && $('.datepicker').each(function() {
+    $('.datepicker')[0] && $('.datepicker').each(function () {
         $('.datepicker').datepicker({
             disableTouchKeyboard: true,
             autoclose: false
@@ -65,25 +65,25 @@ $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
 
     // Popover
-    $('[data-toggle="popover"]').each(function() {
+    $('[data-toggle="popover"]').each(function () {
         var popoverClass = '';
-        if($(this).data('color')) {
-            popoverClass = 'popover-'+$(this).data('color');
+        if ($(this).data('color')) {
+            popoverClass = 'popover-' + $(this).data('color');
         }
         $(this).popover({
             trigger: 'focus',
-            template: '<div class="popover '+ popoverClass +'" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+            template: '<div class="popover ' + popoverClass + '" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
         })
     });
 
     // Additional .focus class on form-groups
-    $('.form-control').on('focus blur', function(e) {
+    $('.form-control').on('focus blur', function (e) {
         $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
     }).trigger('blur');
 
     // NoUI Slider
     if ($(".input-slider-container")[0]) {
-        $('.input-slider-container').each(function() {
+        $('.input-slider-container').each(function () {
 
             var slider = $(this).find('.input-slider');
             var sliderId = slider.attr('id');
@@ -107,7 +107,7 @@ $(document).ready(function() {
                 }
             });
 
-            c.noUiSlider.on('update', function(a, b) {
+            c.noUiSlider.on('update', function (a, b) {
                 d.textContent = a[b];
             });
         })
@@ -126,7 +126,7 @@ $(document).ready(function() {
                 min: parseInt(c.getAttribute('data-range-value-min')),
                 max: parseInt(c.getAttribute('data-range-value-max'))
             }
-        }), c.noUiSlider.on("update", function(a, b) {
+        }), c.noUiSlider.on("update", function (a, b) {
             f[b].textContent = a[b]
         })
     }
@@ -136,10 +136,10 @@ $(document).ready(function() {
     $('[data-toggle="on-screen"]')[0] && $('[data-toggle="on-screen"]').onScreen({
         container: window,
         direction: 'vertical',
-        doIn: function() {
+        doIn: function () {
             //alert();
         },
-        doOut: function() {
+        doOut: function () {
             // Do something to the matched elements as they get off scren
         },
         tolerance: 200,
@@ -149,7 +149,7 @@ $(document).ready(function() {
     });
 
     // Scroll to anchor with scroll animation
-    $('[data-toggle="scroll"]').on('click', function(event) {
+    $('[data-toggle="scroll"]').on('click', function (event) {
         var hash = $(this).attr('href');
         var offset = $(this).data('offset') ? $(this).data('offset') : 0;
 
@@ -160,4 +160,54 @@ $(document).ready(function() {
 
         event.preventDefault();
     });
- });
+
+
+    $('#fm-contact').validate({
+        rules: {
+            name: {
+                minlength: 2,
+                required: true
+            },
+            email: {
+                required: true,
+                email: true,
+            },
+            tel: {
+                minlength: 8,
+                required: true,
+            },
+            msg: {
+                minlength: 2,
+                required: true
+            }
+        },
+
+        messages: {
+            name: "وارد کردن نام و نام خانوادگی الزامی می باشد",
+            email: "وارد کردن ایمیل الزامی می باشد.",
+            tel: "وارد کردن تلفن الزامی می باشد.",
+            msg: "وارد کردن پیغامالزامی می باشد.",
+        },
+
+        highlight: function (element, errorClass, validClass) {
+            $(element).parents(".form-group")
+                .addClass("options-error")
+                .removeClass("valid");
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).parents(".form-group")
+                .addClass("valid")
+                .removeClass("options-error");
+        },
+        // success: function (element) {
+        //     element.text('OK!').addClass('valid')
+        //         .closest('.form-group').removeClass('error').addClass('success');
+        // },
+        // error: function (element) {
+        //     element
+        //         .closest('.form-group').removeClass('has-success').addClass('is-invalid');
+        // },
+
+    });
+
+});

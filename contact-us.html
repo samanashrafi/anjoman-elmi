@@ -255,14 +255,14 @@
                 </div>
                 <div class="col-md-6 col-lg-6">
                   <div class="item">
-                    <form id="fm-contact" class="form-horizontal" action="/action_page.php">
+                    <form id="fm-contact" class="form-horizontal" onsubmit="return false" >
                       <div class="form-group">
                         <div class="container">
                           <div class="row">
-                            <div class="col-md-4 col-lg-4">
+                            <div class="col-md-6 col-lg-4">
                               <label class="control-label bold" for="name">نام و نام خانوادگی</label>
                             </div>
-                            <div class="col-md-8 col-lg-8">
+                            <div class="col-md-6 col-lg-8">
                               <input type="text" autocomplete="true" class="form-control" id="name" name="name">
                             </div>
                           </div>
@@ -271,10 +271,10 @@
                       <div class="form-group">
                         <div class="container">
                           <div class="row">
-                            <div class="col-md-4 col-lg-4">
+                            <div class="col-md-6 col-lg-4">
                               <label class="control-label bold" for="email">ایمیل</label>
                             </div>
-                            <div class="col-md-8 col-lg-8">
+                            <div class="col-md-6 col-lg-8">
                               <input type="email" autocomplete="true" class="form-control" id="email" name="email">
                             </div>
                           </div>
@@ -283,10 +283,10 @@
                       <div class="form-group">
                         <div class="container">
                           <div class="row">
-                            <div class="col-md-4 col-lg-4">
+                            <div class="col-md-6 col-lg-4">
                               <label class="control-label bold" for="tel">شماره تلفن</label>
                             </div>
-                            <div class="col-md-8 col-lg-8">
+                            <div class="col-md-6 col-lg-8">
                               <input type="tel" autocomplete="true" class="form-control" id="tel" name="tel">
                             </div>
                           </div>
@@ -296,13 +296,12 @@
                       <div class="form-group">
                         <div class="container">
                           <div class="row">
-                            <div class="col-md-4 col-lg-4">
-                              <label class="control-label bold" for="dec">توضیحات</label>
+                            <div class="col-md-6 col-lg-4">
+                              <label class="control-label bold" for="msg">توضیحات</label>
                             </div>
-                            <div class="col-md-8 col-lg-8">
-                              <textarea type="dec" class="form-control" id="dec" name="dec" cols="2"
+                            <div class="col-md-6 col-lg-8">
+                              <textarea type="dec" class="form-control" id="msg" name="msg" cols="2"
                                 rows="4"></textarea>
-
                             </div>
                           </div>
                         </div>
@@ -375,6 +374,7 @@
 
   <!-- Core -->
   <script src="./assets/vendor/jquery/jquery.min.js"></script>
+  <script src="./assets/vendor/jquery/jquery.validate.min.js"></script>
   <script src="./assets/vendor/popper/popper.min.js"></script>
   <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
   <script src="./assets/vendor/headroom/headroom.min.js"></script>
