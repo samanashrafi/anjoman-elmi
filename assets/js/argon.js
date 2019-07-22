@@ -199,15 +199,24 @@ $(document).ready(function () {
                 .addClass("valid")
                 .removeClass("options-error");
         },
-        // success: function (element) {
-        //     element.text('OK!').addClass('valid')
-        //         .closest('.form-group').removeClass('error').addClass('success');
-        // },
-        // error: function (element) {
-        //     element
-        //         .closest('.form-group').removeClass('has-success').addClass('is-invalid');
-        // },
 
+    });
+
+    $('#fm-login').validate({
+        rules: {
+            email: {
+                required: true,
+                email: true,
+            },
+            password: {
+                minlength: 6,
+                required: true
+            }
+        },
+        messages: {
+            email: "وارد کردن ایمیل الزامی می باشد.",
+            password: "وارد کردن کلمه عبور الزامی می باشد."
+        },
     });
 
 });

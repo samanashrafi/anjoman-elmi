@@ -3,7 +3,7 @@ body {
   direction: rtl;
   text-align: right;
 }
-area{
+area {
   size: none;
 }
 
@@ -546,7 +546,6 @@ footer {
   }
 }
 
-
 // ------------- WorkShop Page  -------------
 .workshop-list {
   .item {
@@ -554,7 +553,7 @@ footer {
     margin: 0 15px;
     border-bottom: 1px solid #eeeeee;
     margin-bottom: $margin-bottom;
-    
+
     &:last-child {
       border-bottom: none;
     }
@@ -610,7 +609,8 @@ footer {
 }
 
 .page-item {
-  .page-link, span{
+  .page-link,
+  span {
     width: unset !important;
     height: unset !important;
     min-width: 36px;
@@ -618,21 +618,28 @@ footer {
     padding: 5px;
     border-radius: 0 !important;
   }
-  &.active{
-    .page-link{
+  &.active {
+    .page-link {
       background-color: #005e91;
     }
   }
 }
 
 // ------------- contact Us Page  -------------
-.contact-us{
-   .item{
-      padding: $margin
-   }
+.contact-us {
+  .item {
+    padding: $margin;
+  }
 }
-
-
+// ------------- contact Us Page  -------------
+.login {
+  .box {
+    padding: 75px 0;
+    .item {
+      padding: $margin;
+    }
+  }
+}
 .bold {
   font-weight: bold;
 }
@@ -657,25 +664,39 @@ footer {
 .m-t {
   margin-top: $margin-top;
 }
+
 // @media (min-width: 1200px) {
 //   .container {
 //     max-width: 1200px;
 //   }
 // }
 
-
 // ------------- Form Control  -------------
 
-.form-control{
+.form-control {
   border-radius: 0px;
 }
 
-.btn-custom{
+.btn-custom {
   width: 100%;
   background: #f14f7e;
-  border:none;
+  border: none;
   border-radius: 0px;
-  &:hover{
+  &:hover {
     background: #d32456;
   }
+}
+
+.custom-control-label {
+  &::before,
+  &::after {
+    right: 0;
+  }
+  span {
+    right: 30px;
+  }
+}
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  border: #d32456;
+  background: #d32456;
 }
