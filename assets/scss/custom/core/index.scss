@@ -3,6 +3,9 @@ body {
   direction: rtl;
   text-align: right;
 }
+area{
+  size: none;
+}
 
 //  ------------- Public Class  -------------
 
@@ -622,6 +625,14 @@ footer {
   }
 }
 
+// ------------- contact Us Page  -------------
+.contact-us{
+   .item{
+      padding: $margin
+   }
+}
+
+
 .bold {
   font-weight: bold;
 }
@@ -651,3 +662,20 @@ footer {
 //     max-width: 1200px;
 //   }
 // }
+
+
+// ------------- Form Control  -------------
+
+.form-control{
+  border-radius: 0px;
+}
+
+.btn-custom{
+  width: 100%;
+  background: #f14f7e;
+  border:none;
+  border-radius: 0px;
+  &:hover{
+    background: #d32456;
+  }
+}

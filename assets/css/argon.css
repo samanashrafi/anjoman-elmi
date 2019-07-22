@@ -20365,6 +20365,11 @@ body
     direction: rtl;
 }
 
+area
+{
+    size: none;
+}
+
 .carousel
 {
     margin-bottom: 30px;
@@ -21130,6 +21135,11 @@ footer ul li a:hover
     background-color: #005e91;
 }
 
+.contact-us .item
+{
+    padding: 15px;
+}
+
 .bold
 {
     font-weight: bold;
@@ -21163,4 +21173,22 @@ footer ul li a:hover
 .m-t
 {
     margin-top: 30px;
+}
+
+.form-control
+{
+    border-radius: 0;
+}
+
+.btn-custom
+{
+    width: 100%;
+
+    border: none;
+    border-radius: 0; 
+    background: #f14f7e;
+}
+.btn-custom:hover
+{
+    background: #d32456;
 }
