@@ -177,7 +177,6 @@ $(document).ready(function () {
                 required: true,
             },
             msg: {
-                minlength: 2,
                 required: true
             }
         },
@@ -186,19 +185,9 @@ $(document).ready(function () {
             name: "وارد کردن نام و نام خانوادگی الزامی می باشد",
             email: "وارد کردن ایمیل الزامی می باشد.",
             tel: "وارد کردن تلفن الزامی می باشد.",
-            msg: "وارد کردن پیغامالزامی می باشد.",
+            msg: "وارد کردن پیغام الزامی می باشد.",
         },
 
-        highlight: function (element, errorClass, validClass) {
-            $(element).parents(".form-group")
-                .addClass("options-error")
-                .removeClass("valid");
-        },
-        unhighlight: function (element, errorClass, validClass) {
-            $(element).parents(".form-group")
-                .addClass("valid")
-                .removeClass("options-error");
-        },
 
     });
 

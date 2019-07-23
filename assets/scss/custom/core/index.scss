@@ -672,10 +672,25 @@ footer {
 // }
 
 // ------------- Form Control  -------------
-
-.form-control {
-  border-radius: 0px;
+.form-group{
+  position: relative;
+  margin-bottom: 1.7rem;
+  .form-control {
+    border-radius: 0px;
+    &.error{
+      border: #f34747 1px solid;
+    }
+  }
+  label{
+    &.error{
+      position: absolute;
+      left: 0;
+      color: rgb(243, 71, 71);
+      font-size: 0.7em;
+    }
+  }
 }
+
 
 .btn-custom {
   width: 100%;
