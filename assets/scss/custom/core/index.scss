@@ -626,7 +626,7 @@ footer {
 }
 
 // ------------- contact Us Page  -------------
-.contact-us {
+.contact-us,.signup {
   .item {
     padding: $margin;
   }
@@ -682,9 +682,11 @@ footer {
     }
   }
   label{
+    margin-top: 10px;
     &.error{
       position: absolute;
-      left: 0;
+      left: 15px;
+      margin-top: 0;
       color: rgb(243, 71, 71);
       font-size: 0.7em;
     }

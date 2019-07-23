@@ -21135,7 +21135,8 @@ footer ul li a:hover
     background-color: #005e91;
 }
 
-.contact-us .item
+.contact-us .item,
+.signup .item
 {
     padding: 15px;
 }
@@ -21198,12 +21199,18 @@ footer ul li a:hover
 {
     border: #f34747 1px solid;
 }
+.form-group label
+{
+    margin-top: 10px;
+}
 .form-group label.error
 {
     font-size: .7em; 
 
     position: absolute;
-    left: 20px;
+    left: 15px;
+
+    margin-top: 0;
 
     color: #f34747;
 }

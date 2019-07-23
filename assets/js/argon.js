@@ -191,6 +191,40 @@ $(document).ready(function () {
 
     });
 
+    $('#fm-signup').validate({
+        rules: {
+            username: {
+                minlength: 10,
+                required: true
+            },
+            name: {
+                minlength: 8,
+                required: true
+            },
+            email: {
+                required: true,
+                email: true,
+            },
+            tel: {
+                minlength: 8,
+                required: true,
+            },
+            password: {
+                minlength: 6,
+                required: true
+            }
+        },
+
+        messages: {
+            username: "وارد کردن نام کاربری الزامی می باشد",
+            name: "وارد کردن نام و نام خانوادگی الزامی می باشد",
+            email: "وارد کردن ایمیل الزامی می باشد.",
+            tel: "وارد کردن تلفن الزامی می باشد.",
+            password: "وارد کردن کلمه عبور الزامی می باشد.",
+        },
+
+    });
+
     $('#fm-login').validate({
         rules: {
             email: {
