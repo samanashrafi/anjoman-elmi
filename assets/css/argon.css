@@ -20477,6 +20477,13 @@ area
     padding-left: 15px;
 }
 
+.dropdown-item:focus,
+.dropdown-item:hover
+{
+    color: #f8f8f8;
+    background-color: #f5365c;
+}
+
 .headroom
 {
     will-change: unset;
@@ -20862,6 +20869,20 @@ footer ul li a:hover
     color: #f14f7e;
 }
 
+.carousel-caption
+{
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding-bottom: 0;
+
+    text-align: center;
+
+    color: #fff;
+    background: rgba(0, 94, 145, .639216);
+}
+
 .member .box,
 .view-member .box
 {
@@ -20996,6 +21017,8 @@ footer ul li a:hover
 .breadcrumb .breadcrumb-item
 {
     padding-left: 0;
+
+    color: #828282;
 }
 .breadcrumb .breadcrumb-item a
 {
@@ -21183,6 +21206,19 @@ footer ul li a:hover
 .m-t
 {
     margin-top: 30px;
+}
+
+.pagination
+{
+    display: table; 
+
+    margin: 15px auto;
+    padding: 0 15px;
+}
+.pagination .page-item
+{
+    display: flex;
+    float: right;
 }
 
 .form-group

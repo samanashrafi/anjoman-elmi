@@ -111,6 +111,14 @@ area {
     padding-left: 15px;
   }
 }
+.dropdown-item {
+  &:focus,
+  &:hover {
+    color: #f8f8f8;
+    background-color: #f5365c;
+  }
+}
+
 .headroom {
   will-change: unset;
 }
@@ -402,6 +410,16 @@ footer {
     }
   }
 }
+.carousel-caption {
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 0px; 
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 94, 145, 0.6392156862745098);
+}
 
 // ------------- Memebr Page  -------------
 
@@ -506,6 +524,7 @@ footer {
   border-radius: 0;
   .breadcrumb-item {
     padding-left: 0;
+    color: #828282;
     a {
       color: #bbbbbb;
       &:hover {
@@ -626,7 +645,8 @@ footer {
 }
 
 // ------------- contact Us Page  -------------
-.contact-us,.signup {
+.contact-us,
+.signup {
   .item {
     padding: $margin;
   }
@@ -664,6 +684,15 @@ footer {
 .m-t {
   margin-top: $margin-top;
 }
+.pagination{
+  padding: 0 15px;
+  margin: 15px auto;
+  display: table;
+  .page-item{
+    display: flex;
+    float:right;
+  }
+}
 
 // @media (min-width: 1200px) {
 //   .container {
@@ -672,18 +701,18 @@ footer {
 // }
 
 // ------------- Form Control  -------------
-.form-group{
+.form-group {
   position: relative;
   margin-bottom: 1.7rem;
   .form-control {
     border-radius: 0px;
-    &.error{
+    &.error {
       border: #f34747 1px solid;
     }
   }
-  label{
+  label {
     margin-top: 10px;
-    &.error{
+    &.error {
       position: absolute;
       left: 15px;
       margin-top: 0;
@@ -692,7 +721,6 @@ footer {
     }
   }
 }
-
 
 .btn-custom {
   width: 100%;
