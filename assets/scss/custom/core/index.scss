@@ -2,6 +2,9 @@ body {
   font-family: iranyekan;
   direction: rtl;
   text-align: right;
+  line-height: 1.42857143;
+  color: #555;
+  font-size: 0.9em;
 }
 area {
   size: none;
@@ -27,13 +30,14 @@ area {
   }
 
   h3 {
-    font-size: 1em;
+    font-size: 1.3em;
     background: #ececec;
     font-weight: 600;
   }
   .description {
     text-align: justify;
     padding-bottom: 0;
+    font-size: unset !important;
   }
   .info {
     display: flex;
@@ -131,7 +135,9 @@ area {
   // margin: 0 -15px;
   .navbar-nav {
     padding: 0;
+    font-weight: bold;
     .nav-link {
+      font-weight: bold;
       font-family: unset;
       margin: 0;
       text-align: right;
@@ -185,7 +191,7 @@ area {
 
 .navbar-toggler-icon {
   i {
-    font-size: 36px;
+    font-size: 31px;
     position: relative;
     top: -3px;
   }
@@ -199,9 +205,9 @@ area {
       max-width: 70px;
       max-height: 70px;
       float: right;
+      margin-left: 15px;
     }
     div {
-      float: right;
       font-size: 18px;
       font-weight: bold;
       margin-right: 10px;
@@ -313,13 +319,15 @@ area {
     padding: 10px 15px;
     color: #005e91;
     font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 15px;
   }
   .item {
     padding-right: 50px;
     float: right;
     width: 100%;
     h4 {
-      font-size: 1em;
+      font-size: 1.4em;
       span {
         &:last-child {
           color: #b8b8b8;
@@ -352,7 +360,7 @@ area {
   padding: 10px 15px;
 
   h5 {
-    font-size: 1em;
+    font-size: 1.3em;
     padding-right: 15px;
     span {
       &:last-child {
@@ -506,14 +514,14 @@ footer {
 .about-us-bg {
   background: url("../../../../assets/img/theme/anjoman.jpg") center center no-repeat;
   background-size: cover;
-  height: 156px;
+  height: 146px;
   &::before {
     content: "";
     position: absolute;
     top: 0;
     right: 15px;
     width: calc(100% - 30px);
-    height: 156px;
+    height: 146px;
     background: rgba(51, 51, 51, 0.55);
   }
 }
@@ -581,7 +589,7 @@ footer {
       margin-bottom: $margin-bottom;
       a,
       h2 {
-        font-size: 1.1em;
+        font-size: 1.35em;
         color: #333;
         font-weight: 600;
         &:hover {
@@ -712,6 +720,7 @@ footer {
   }
   label {
     margin-top: 10px;
+    font-size: unset;
     &.error {
       position: absolute;
       left: 15px;
