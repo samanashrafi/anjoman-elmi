@@ -63,6 +63,10 @@ area {
   color: #b8b8b8;
   text-align: center;
   margin-bottom: $margin-bottom;
+  &.green{
+    color:#fff;
+    background-color: #218096;
+  }
 }
 
 .Fade-in-Out {
@@ -260,7 +264,7 @@ area {
 
 .main,
 .member,
-.view-member {
+.view-member,.magazine-view,.magazine {
   margin-top: $margin-top;
   .side-right,
   .side-left {
@@ -419,11 +423,10 @@ footer {
   }
 }
 .carousel-caption {
-
   right: 0;
   bottom: 0;
   left: 0;
-  padding-bottom: 0px; 
+  padding-bottom: 0px;
   text-align: center;
   color: #fff;
   background: rgba(0, 94, 145, 0.6392156862745098);
@@ -432,7 +435,7 @@ footer {
 // ------------- Memebr Page  -------------
 
 .member,
-.view-member {
+.view-member,.magazine ,.magazine-view{
   .box {
     min-height: 292px;
     .description {
@@ -460,6 +463,9 @@ footer {
   .pic {
     display: table;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    background: #fff;
     box-shadow: 0 0 20px 1px #f5f5f5 !important;
     width: 120px;
     height: 120px;
@@ -483,19 +489,20 @@ footer {
     position: relative;
     &::before {
       position: absolute;
-      z-index: -1;
+      z-index: 0;
       bottom: -136px;
       right: -92px;
       width: 127%;
       height: 279px;
       content: "";
-      background: #fafafa94;
+      background: rgba(250, 250, 250, 0.76);
       transform: rotate(167deg);
     }
     .name {
       font-weight: 600;
       font-size: 1.4em;
       color: #333;
+      position: relative;
       z-index: 1;
       &:hover {
         color: #f14f7e;
@@ -503,10 +510,56 @@ footer {
     }
     p {
       margin: 0;
+      position: relative;
       font-size: 0.9em;
       z-index: 1;
     }
   }
+}
+
+
+// ------------- magazine Page  -------------
+
+
+
+.magazine{
+  .box {
+    .item {
+      padding: 0;
+    }
+  }
+}
+
+.magazine-box {
+  margin: $margin-top 0 0 0;
+  background-color: hsla(0, 0%, 99%, 0.30980392156862746);
+  overflow: hidden;
+  text-align: center;
+  min-height: 280px;
+  margin: 0 0 30px 0;
+
+  box-shadow: 0 0 20px 1px #f5f5f5 !important;
+  padding: 15px;
+  .pic {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    overflow: hidden;
+    margin: 0 0 30px 0;
+    border: 5px solid #ececec;
+    img {
+      width: 100%;
+    }
+    .icon {
+      color: #cacaca;
+      font-size: 2.6em;
+      margin: 30px auto;
+    }
+  }
+  .btn-custom2{
+    margin: 0 0 10px;
+  }
+
 }
 
 // ------------- About Us Page  -------------
@@ -530,6 +583,26 @@ footer {
   background: #333;
   margin: 0;
   border-radius: 0;
+  &.green {
+    padding-left: 0;
+    background: #185d6d;
+    .breadcrumb-item {
+      color: #fff;
+      a {
+        color: #fff;
+        &:hover {
+          color: white;
+        }
+      }
+      &.active {
+        color: #e2e2e2;
+      }
+      &::before {
+        padding-left: 0.5rem;
+        color: #d3d3d3;
+      }
+    }
+  }
   .breadcrumb-item {
     padding-left: 0;
     color: #828282;
@@ -551,7 +624,7 @@ footer {
 
 // ------------- View Member Page  -------------
 
-.information {
+.information, .magazine-view {
   .pic {
     width: 100%;
     background: #bbbbbb;
@@ -573,6 +646,11 @@ footer {
   }
 }
 
+.magazine-view{
+  .pic{
+    margin-bottom: 15px;
+  }
+}
 // ------------- WorkShop Page  -------------
 .workshop-list {
   .item {
@@ -692,13 +770,13 @@ footer {
 .m-t {
   margin-top: $margin-top;
 }
-.pagination{
+.pagination {
   padding: 0 15px;
   margin: 15px auto;
   display: table;
-  .page-item{
+  .page-item {
     display: flex;
-    float:right;
+    float: right;
   }
 }
 
@@ -731,13 +809,20 @@ footer {
   }
 }
 
-.btn-custom {
+.btn-custom,.btn-custom2 {
   width: 100%;
   background: #f14f7e;
   border: none;
   border-radius: 0px;
   &:hover {
     background: #d32456;
+  }
+}
+
+.btn-custom2 {
+  background: #d32456;
+  &:hover {
+    background: #911438;
   }
 }
 

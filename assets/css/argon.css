@@ -24599,6 +24599,11 @@ area
     color: #b8b8b8;
     background: #666;
 }
+.header-page.green
+{
+    color: #fff;
+    background-color: #218096;
+}
 
 .Fade-in-Out
 {
@@ -24821,7 +24826,9 @@ area
 
 .main,
 .member,
-.view-member
+.view-member,
+.magazine-view,
+.magazine
 {
     margin-top: 30px;
 }
@@ -24830,39 +24837,53 @@ area
 .member .side-right,
 .member .side-left,
 .view-member .side-right,
-.view-member .side-left
+.view-member .side-left,
+.magazine-view .side-right,
+.magazine-view .side-left,
+.magazine .side-right,
+.magazine .side-left
 {
     min-height: 400px;
 }
 .main .intro h3,
 .member .intro h3,
-.view-member .intro h3
+.view-member .intro h3,
+.magazine-view .intro h3,
+.magazine .intro h3
 {
     color: #fff; 
     background-color: #005e91;
 }
 .main .workshop h3,
 .member .workshop h3,
-.view-member .workshop h3
+.view-member .workshop h3,
+.magazine-view .workshop h3,
+.magazine .workshop h3
 {
     background-color: #c2da46;
 }
 .main .remained h3,
 .member .remained h3,
-.view-member .remained h3
+.view-member .remained h3,
+.magazine-view .remained h3,
+.magazine .remained h3
 {
     color: #fff; 
     background-color: #626262;
 }
 .main .remained .description,
 .member .remained .description,
-.view-member .remained .description
+.view-member .remained .description,
+.magazine-view .remained .description,
+.magazine .remained .description
 {
     padding-bottom: 15px;
 }
 .main .remained .description .item,
 .member .remained .description .item,
-.view-member .remained .description .item
+.view-member .remained .description .item,
+.magazine-view .remained .description .item,
+.magazine .remained .description .item
 {
     float: right;
 
@@ -24874,13 +24895,17 @@ area
 }
 .main .remained .description .item .date,
 .member .remained .description .item .date,
-.view-member .remained .description .item .date
+.view-member .remained .description .item .date,
+.magazine-view .remained .description .item .date,
+.magazine .remained .description .item .date
 {
     color: #b8b8b8;
 }
 .main .remained .description .item a,
 .member .remained .description .item a,
-.view-member .remained .description .item a
+.view-member .remained .description .item a,
+.magazine-view .remained .description .item a,
+.magazine .remained .description .item a
 {
     font-weight: 100; 
 
@@ -24892,7 +24917,9 @@ area
 }
 .main .remained .description .item a .badge-success,
 .member .remained .description .item a .badge-success,
-.view-member .remained .description .item a .badge-success
+.view-member .remained .description .item a .badge-success,
+.magazine-view .remained .description .item a .badge-success,
+.magazine .remained .description .item a .badge-success
 {
     padding: 4px 14px;
 
@@ -24901,7 +24928,9 @@ area
 }
 .main .remained .description .item:last-child,
 .member .remained .description .item:last-child,
-.view-member .remained .description .item:last-child
+.view-member .remained .description .item:last-child,
+.magazine-view .remained .description .item:last-child,
+.magazine .remained .description .item:last-child
 {
     padding-bottom: none; 
 
@@ -25048,22 +25077,30 @@ footer ul li a:hover
 }
 
 .member .box,
-.view-member .box
+.view-member .box,
+.magazine .box,
+.magazine .box
 {
     min-height: 292px;
 }
 .member .box .description,
-.view-member .box .description
+.view-member .box .description,
+.magazine .box .description,
+.magazine .box .description
 {
     min-height: 190px;
 }
 .member .box .item,
-.view-member .box .item
+.view-member .box .item,
+.magazine .box .item,
+.magazine .box .item
 {
     padding: 0;
 }
 .member .box .item h4,
-.view-member .box .item h4
+.view-member .box .item h4,
+.magazine .box .item h4,
+.magazine .box .item h4
 {
     font-size: .9em;
 }
@@ -25083,6 +25120,8 @@ footer ul li a:hover
 .memeber-box .pic
 {
     position: relative;
+    position: relative;
+    z-index: 1;
 
     display: table;
     overflow: hidden;
@@ -25094,6 +25133,7 @@ footer ul li a:hover
 
     border: 5px solid #ececec; 
     border-radius: 100%;
+    background: #fff;
     box-shadow: 0 0 20px 1px #f5f5f5 !important;
 }
 .memeber-box .pic img
@@ -25116,7 +25156,7 @@ footer ul li a:hover
 .memeber-box .persona::before
 {
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     right: -92px;
     bottom: -136px;
 
@@ -25126,13 +25166,14 @@ footer ul li a:hover
     content: '';
     transform: rotate(167deg); 
 
-    background: #fafafa94;
+    background: rgba(250, 250, 250, .76);
 }
 .memeber-box .persona .name
 {
     font-size: 1.4em;
     font-weight: 600;
 
+    position: relative;
     z-index: 1; 
 
     color: #333;
@@ -25145,9 +25186,58 @@ footer ul li a:hover
 {
     font-size: .9em;
 
+    position: relative;
     z-index: 1; 
 
     margin: 0;
+}
+
+.magazine .box .item
+{
+    padding: 0;
+}
+
+.magazine-box
+{
+    overflow: hidden;
+
+    min-height: 280px;
+    margin: 30px 0 0 0;
+    margin: 0 0 30px 0;
+    padding: 15px; 
+
+    text-align: center;
+
+    background-color: rgba(252, 252, 252, .309804);
+    box-shadow: 0 0 20px 1px #f5f5f5 !important;
+}
+.magazine-box .pic
+{
+    position: relative;
+    z-index: 1;
+
+    overflow: hidden;
+
+    margin: 0 0 30px 0;
+
+    border: 5px solid #ececec; 
+    background: #fff;
+}
+.magazine-box .pic img
+{
+    width: 100%;
+}
+.magazine-box .pic .icon
+{
+    font-size: 2.6em;
+
+    margin: 30px auto; 
+
+    color: #cacaca;
+}
+.magazine-box .btn-custom2
+{
+    margin: 0 0 10px;
 }
 
 .about-us-bg
@@ -25178,6 +25268,34 @@ footer ul li a:hover
     border-radius: 0; 
     background: #333;
 }
+.breadcrumb.green
+{
+    padding-left: 0;
+
+    background: #185d6d;
+}
+.breadcrumb.green .breadcrumb-item
+{
+    color: #fff;
+}
+.breadcrumb.green .breadcrumb-item a
+{
+    color: #fff;
+}
+.breadcrumb.green .breadcrumb-item a:hover
+{
+    color: white;
+}
+.breadcrumb.green .breadcrumb-item.active
+{
+    color: #e2e2e2;
+}
+.breadcrumb.green .breadcrumb-item::before
+{
+    padding-left: .5rem;
+
+    color: #d3d3d3;
+}
 .breadcrumb .breadcrumb-item
 {
     padding-left: 0;
@@ -25203,7 +25321,8 @@ footer ul li a:hover
     color: #9e9e9e;
 }
 
-.information .pic
+.information .pic,
+.magazine-view .pic
 {
     width: 100%;
 
@@ -25211,22 +25330,30 @@ footer ul li a:hover
     background: #bbb;
     box-shadow: 0 0 20px 1px #f5f5f5 !important;
 }
-.information .pic img
+.information .pic img,
+.magazine-view .pic img
 {
     width: 100%;
 }
 
-.information .lbl
+.information .lbl,
+.magazine-view .lbl
 {
     font-size: 2em;
 }
-.information .lbl span:first-child
+.information .lbl span:first-child,
+.magazine-view .lbl span:first-child
 {
     font-weight: 600; 
 
     margin-top: 30px;
 
     color: #444;
+}
+
+.magazine-view .pic
+{
+    margin-bottom: 15px;
 }
 
 .workshop-list .item
@@ -25417,7 +25544,8 @@ footer ul li a:hover
     color: #f34747;
 }
 
-.btn-custom
+.btn-custom,
+.btn-custom2
 {
     width: 100%;
 
@@ -25425,9 +25553,19 @@ footer ul li a:hover
     border-radius: 0; 
     background: #f14f7e;
 }
-.btn-custom:hover
+.btn-custom:hover,
+.btn-custom2:hover
 {
     background: #d32456;
+}
+
+.btn-custom2
+{
+    background: #d32456;
+}
+.btn-custom2:hover
+{
+    background: #911438;
 }
 
 .custom-control-label::before,
